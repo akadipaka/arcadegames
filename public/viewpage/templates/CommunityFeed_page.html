@@ -1,0 +1,22 @@
+<div>
+    <h2>
+        Community Feed
+    </h2>
+</div>
+<div>
+    <button class="btn btn-outline-primary" id="create">
+        Create
+    </button>
+</div>
+<div>
+    <form action="post" id="form-create" style="display: none;">
+        <div>
+            <textarea placeholder="Enter a message to post" id="feedmessage" required></textarea>
+        </div>
+        <div>
+            <button class="btn btn-outline-danger" type="submit" onclick="this.form.submitter='save'">Save</button>
+            <button class="btn btn-outline-secondary" type="submit" onclick="this.form.submitter='cancel'"
+                formnovalidate>Cancel</button>
+        </div>
+    </form>
+</div>

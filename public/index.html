@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>  GAME ARCADE</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="my-banner">  Arcade Games</div>
+
+
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item modal-preauth">
+            <button  id="menu-signin" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modal-signin-form">Sign In</button>
+          </li>
+          <li class="nav-item modal-postauth">
+            <button  id="menu-tictactoe" class="btn btn-outline-primary">TicTacToe</button>
+          </li>
+          <li class="nav-item modal-postauth">
+            <button  id="menu-communityfeedpage" class="btn btn-outline-primary">Community</button>
+          </li>
+          <li class="nav-item modal-postauth">
+            <button  id="menu-about" class="btn btn-outline-secondary">About</button>
+          </li>
+          <li class="nav-item modal-postauth">
+            <button  id="menu-signout" class="btn btn-outline-danger">Sign Out</button>
+          </li>
+          </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="root" class="bg-light m-3 p-4"></div>
+
+
+<!-- Modal: Sign In -->
+<div class="modal fade" id="modal-signin-form" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal-signin-form-label">Sign in, please</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <form id="formsign-in" method="post">
+        <div>
+          <input type="email" name="email" placeholder="email-address">
+        </div>
+        <div>
+          <input type="password" name="password" minlength="6" placeholder="password">
+        </div>
+        <div>
+          <button class="btn btn-outline-danger" type="submit">Sign In </button>
+        </div>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal  popup info box-->
+<div class="modal fade" id="modal-infobox" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+aria-labelledby="modal-info-title" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="modal-info-title"></h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body" id="modal-info-body">
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+    </div>
+  </div>
+</div>
+</div>
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+  apiKey: "AIzaSyDnFfj16A1Wm0iSn0sJzhaDfJ1vusClkSQ",
+  authDomain: "arcadegames-923f9.firebaseapp.com",
+  projectId: "arcadegames-923f9",
+  storageBucket: "arcadegames-923f9.appspot.com",
+  messagingSenderId: "501886462299",
+  appId: "1:501886462299:web:9910f194c6e0ce11f4927e",
+  measurementId: "G-0573LFX18D"
+};
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  </script>
+
+  <script type="module" src="app.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
